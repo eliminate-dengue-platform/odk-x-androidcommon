@@ -90,7 +90,7 @@ public class OdkCommon {
     String appName = mActivity.getAppName();
     Map<String, Object> platformInfo = new HashMap<String, Object>();
     platformInfo.put(PlatformInfoKeys.VERSION, Build.VERSION.RELEASE);
-    platformInfo.put(PlatformInfoKeys.CONTAINER, "Android");
+    platformInfo.put(PlatformInfoKeys.CONTAINER, "WMPAndroid");
     platformInfo.put(PlatformInfoKeys.APP_NAME, appName);
     platformInfo.put(PlatformInfoKeys.BASE_URI, getBaseContentUri());
     platformInfo.put(PlatformInfoKeys.FORMS_URI, FormsProviderAPI.CONTENT_URI.toString());
