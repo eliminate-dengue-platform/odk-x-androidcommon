@@ -203,7 +203,9 @@ import org.opendatakit.utilities.ODKFileUtils;
       // disable to try to solve touch/mouse/swipe issues
       ws.setSupportZoom(true);
       ws.setUseWideViewPort(false);
-      ws.setMediaPlaybackRequiresUserGesture(false);
+      if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN_MR1) {
+         ws.setMediaPlaybackRequiresUserGesture(false);
+      }
 
       setFocusable(true);
       setFocusableInTouchMode(true);

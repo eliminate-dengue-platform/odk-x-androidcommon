@@ -62,6 +62,9 @@ public class ODKWebViewClient extends WebViewClient {
     wrappedView.getLogger().i(t, "onPageFinished: " + url + " ms: " + Long.toString(System.currentTimeMillis()));
     wrappedView.pageFinished(url);
     super.onPageFinished(view, url);
+
+    wrappedView.loadUrl("javascript:(function() { document.getElementById('video').play(); })()");
+    wrappedView.loadUrl("javascript:(function() { document.getElementById('video').pause(); })()");
   }
 
   @SuppressWarnings("deprecation")
